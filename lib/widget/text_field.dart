@@ -69,7 +69,7 @@ class _CustomTextFieldState extends State<CustomTextField> {
             top: 0,
             left: 0,
             child: Container(
-              color: const Color.fromRGBO(245, 244, 244, 1),
+              // color: const Color.fromRGBO(245, 244, 244, 1),
               padding: const EdgeInsets.symmetric(horizontal: 4),
               child: Text(
                 widget.labelText,

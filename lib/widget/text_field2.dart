@@ -1,28 +1,26 @@
 import 'package:flutter/material.dart';
 
-class CustomTextField extends StatefulWidget {
+class TextField2 extends StatefulWidget {
   final String hintText;
   final String labelText;
   final TextInputType keyboardType;
-  final bool obscureText;
 
-  const CustomTextField({
+  const TextField2({
     super.key,
     required this.hintText,
     required this.labelText,
     this.keyboardType = TextInputType.text,
-    this.obscureText = false,
   });
 
   @override
-  State<CustomTextField> createState() => _CustomTextFieldState();
+  State<TextField2> createState() => _TextField2State();
 }
 
-class _CustomTextFieldState extends State<CustomTextField> {
+class _TextField2State extends State<TextField2> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 300,
+      width: 140,
       height: 60,
       child: Stack(
         children: <Widget>[
@@ -43,7 +41,6 @@ class _CustomTextFieldState extends State<CustomTextField> {
               padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 0),
               child: TextField(
                 keyboardType: widget.keyboardType,
-                obscureText: widget.obscureText,
                 decoration: InputDecoration(
                   border: InputBorder.none,
                   hintText: widget.hintText,
@@ -87,5 +84,6 @@ class _CustomTextFieldState extends State<CustomTextField> {
         ],
       ),
     );
+    ;
   }
 }

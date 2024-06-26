@@ -19,23 +19,26 @@ class SplashScreen extends StatelessWidget {
               width: 190,
               height: 190,
             ),
-            const SizedBox(height: 10),
-            const Text(
-              'Smart Water System',
-              style: TextStyle(
-                fontSize: 25,
-                fontWeight: FontWeight.bold,
-                color: Colors.black,
-              ),
-            ),
-            const SizedBox(height: 20),
+            // const SizedBox(height: 10),
+            // const Text(
+            //   'Smart Water System',
+            //   style: TextStyle(
+            //     fontSize: 25,
+            //     fontWeight: FontWeight.bold,
+            //     color: Colors.black,
+            //   ),
+            // ),
+            const SizedBox(height: 70),
             const CustomTextField(
               hintText: 'Masukkan Email/Username',
               labelText: 'Email/Username',
+              keyboardType: TextInputType.text,
             ),
             const CustomTextField(
               hintText: 'Masukkan Password',
               labelText: 'Password',
+              keyboardType: TextInputType.visiblePassword,
+              obscureText: true,
             ),
             const SizedBox(height: 20),
             CustomButton(
@@ -49,7 +52,8 @@ class SplashScreen extends StatelessWidget {
               text: 'Daftar',
               onPressed: () {},
               borderColor: Color.fromRGBO(190, 10, 178, 1),
-              textStyle: const TextStyle(color: Color.fromRGBO(190, 10, 178, 1), fontSize: 14),
+              textStyle: const TextStyle(
+                  color: Color.fromRGBO(190, 10, 178, 1), fontSize: 14),
             ),
           ],
         ),

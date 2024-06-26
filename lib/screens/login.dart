@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:mobile_apps_sws/screens/regist.dart';
 import 'package:mobile_apps_sws/widget/outline_button.dart';
 import 'package:mobile_apps_sws/widget/primary_button.dart';
 import 'package:mobile_apps_sws/widget/text_field.dart';
 
-class SplashScreen extends StatelessWidget {
-  const SplashScreen({Key? key}) : super(key: key);
+class Login extends StatelessWidget {
+  static String routeName = "/login";
+
+  const Login({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -48,9 +51,13 @@ class SplashScreen extends StatelessWidget {
               textStyle: const TextStyle(color: Colors.white, fontSize: 14),
             ),
             const SizedBox(height: 5),
+            const SizedBox(height: 5),
             CustomOutlineButton(
               text: 'Daftar',
-              onPressed: () {},
+              onPressed: () => Navigator.pushNamed(
+                          context,
+                          Regist.routeName,
+                        ),
               borderColor: Color.fromRGBO(190, 10, 178, 1),
               textStyle: const TextStyle(
                   color: Color.fromRGBO(190, 10, 178, 1), fontSize: 14),

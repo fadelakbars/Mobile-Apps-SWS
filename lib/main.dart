@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:mobile_apps_sws/screens/login.dart';
+import 'package:mobile_apps_sws/screens/lupa_pass.dart';
 import 'package:mobile_apps_sws/screens/regist.dart';
+import 'routes.dart';
 
 void main() {
   runApp(const MainApp());
@@ -14,7 +16,8 @@ class MainApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Mobile Apps SWS',
-      home: Regist(),
+      home: Login(),
+      routes: routes,
     );
   }
 }

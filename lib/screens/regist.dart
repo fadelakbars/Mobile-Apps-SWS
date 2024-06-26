@@ -1,10 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:mobile_apps_sws/screens/login.dart';
 import 'package:mobile_apps_sws/widget/primary_button.dart';
 import 'package:mobile_apps_sws/widget/text_button.dart';
 import 'package:mobile_apps_sws/widget/text_field.dart';
 import 'package:mobile_apps_sws/widget/text_field2.dart';
 
 class Regist extends StatelessWidget {
+
+  static String routeName = "/regist";
+
   const Regist({super.key});
 
   @override
@@ -102,7 +106,10 @@ class Regist extends StatelessWidget {
                 // height: 1.5,
               ),
             ),
-              CustomTextButton(text: 'Login', onPressed: () {}),
+              CustomTextButton(text: 'Login', onPressed: () => Navigator.pushNamed(
+                          context,
+                          Login.routeName,
+                        ),),
             ],
           ),
 

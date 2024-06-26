@@ -69,7 +69,7 @@ class _CustomTextFieldState extends State<CustomTextField> {
             top: 0,
             left: 0,
             child: Container(
-              // color: const Color.fromRGBO(245, 244, 244, 1),
+              color: const Color.fromRGBO(245, 244, 244, 1),
               padding: const EdgeInsets.symmetric(horizontal: 4),
               child: Text(
                 widget.labelText,
@@ -78,7 +78,7 @@ class _CustomTextFieldState extends State<CustomTextField> {
                   color: Color.fromRGBO(30, 30, 30, 1),
                   fontFamily: 'Poppins',
                   fontSize: 14,
-                  fontWeight: FontWeight.normal,
+                  fontWeight: FontWeight.bold,
                   height: 1.5,
                 ),
               ),

@@ -3,11 +3,13 @@ import 'package:mobile_apps_sws/widget/primary_button.dart';
 import 'package:mobile_apps_sws/widget/text_field_verify.dart';
 
 class VerifyEmail extends StatelessWidget {
+  static String routeName = "/verifikasi_otp";
+
   const VerifyEmail({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return  Scaffold(
+    return Scaffold(
       backgroundColor: Colors.white,
       body: Center(
         child: Column(
@@ -20,7 +22,6 @@ class VerifyEmail extends StatelessWidget {
                 fontFamily: 'Poppins',
                 fontSize: 30,
                 fontWeight: FontWeight.bold,
-                // height: 1.5,
               ),
             ),
             const SizedBox(height: 5),
@@ -32,26 +33,28 @@ class VerifyEmail extends StatelessWidget {
                 fontFamily: 'Poppins',
                 fontSize: 15,
                 fontWeight: FontWeight.normal,
-                // height: 1.5,
               ),
             ),
             const SizedBox(height: 45),
-            const Row( 
+            const Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                CustomTextFieldVerify(hintText: '1'),
-                const SizedBox(width: 10,),
-                CustomTextFieldVerify(hintText: '0'),
-                const SizedBox(width: 10,),
-                CustomTextFieldVerify(hintText: '0'),
-                const SizedBox(width: 10,),
-                CustomTextFieldVerify(hintText: '0'),
+                CustomTextFieldVerify(),
+                SizedBox(
+                  width: 10,
+                ),
+                CustomTextFieldVerify(),
+                SizedBox(
+                  width: 10,
+                ),
+                CustomTextFieldVerify(),
+                SizedBox(
+                  width: 10,
+                ),
+                CustomTextFieldVerify(),
               ],
             ),
             const SizedBox(height: 15),
-
-
-
             const Text(
               "Kirim Ulang Kode",
               textAlign: TextAlign.center,
@@ -63,8 +66,7 @@ class VerifyEmail extends StatelessWidget {
                 // height: 1.5,
               ),
             ),
-
-            CustomButton(text: 'Verifikasi', onPressed: (){})
+            CustomButton(text: 'Verifikasi', onPressed: () {})
           ],
         ),
       ),

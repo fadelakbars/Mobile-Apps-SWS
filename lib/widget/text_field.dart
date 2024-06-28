@@ -22,8 +22,7 @@ class _CustomTextFieldState extends State<CustomTextField> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 300,
-      height: 60,
+      height: 70,
       child: Stack(
         children: <Widget>[
           Positioned(
@@ -31,7 +30,7 @@ class _CustomTextFieldState extends State<CustomTextField> {
             left: 0,
             right: 0,
             child: Container(
-              height: 33,
+              height: 40,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(5),
                 color: const Color.fromRGBO(245, 244, 244, 1),
@@ -69,7 +68,8 @@ class _CustomTextFieldState extends State<CustomTextField> {
             top: 0,
             left: 0,
             child: Container(
-              //color: const Color.fromRGBO(245, 244, 244, 1),
+              // Menghapus background color yang tidak diperlukan
+              // color: const Color.fromRGBO(245, 244, 244, 1),
               padding: const EdgeInsets.symmetric(horizontal: 4),
               child: Text(
                 widget.labelText,

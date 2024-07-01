@@ -22,16 +22,15 @@ class _CustomTextFieldState extends State<CustomTextField> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 300,
-      height: 60,
+      height: 75,
       child: Stack(
         children: <Widget>[
           Positioned(
-            top: 21,
+            top: 23,
             left: 0,
             right: 0,
             child: Container(
-              height: 33,
+              height: 50,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(5),
                 color: const Color.fromRGBO(245, 244, 244, 1),
@@ -40,7 +39,7 @@ class _CustomTextFieldState extends State<CustomTextField> {
                   width: 1,
                 ),
               ),
-              padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 0),
+              padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 3),
               child: TextField(
                 keyboardType: widget.keyboardType,
                 obscureText: widget.obscureText,
@@ -50,7 +49,7 @@ class _CustomTextFieldState extends State<CustomTextField> {
                   hintStyle: const TextStyle(
                     color: Color.fromRGBO(127, 125, 125, 1),
                     fontFamily: 'Urbanist',
-                    fontSize: 12,
+                    fontSize: 14,
                     fontWeight: FontWeight.normal,
                     height: 1.5,
                   ),
@@ -58,7 +57,7 @@ class _CustomTextFieldState extends State<CustomTextField> {
                 style: const TextStyle(
                   color: Color.fromRGBO(30, 30, 30, 1),
                   fontFamily: 'Poppins',
-                  fontSize: 12,
+                  fontSize: 14,
                   fontWeight: FontWeight.normal,
                   height: 1.5,
                 ),
@@ -69,7 +68,8 @@ class _CustomTextFieldState extends State<CustomTextField> {
             top: 0,
             left: 0,
             child: Container(
-              //color: const Color.fromRGBO(245, 244, 244, 1),
+              // Menghapus background color yang tidak diperlukan
+              // color: const Color.fromRGBO(245, 244, 244, 1),
               padding: const EdgeInsets.symmetric(horizontal: 4),
               child: Text(
                 widget.labelText,

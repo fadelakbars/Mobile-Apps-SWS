@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:mobile_apps_sws/screens/home.dart';
 import 'package:mobile_apps_sws/screens/login.dart';
 import 'package:mobile_apps_sws/screens/lupa_pass.dart';
 import 'package:mobile_apps_sws/screens/regist.dart';
+import 'package:mobile_apps_sws/screens/verify.dart';
 import 'routes.dart';
 
 void main() {
@@ -18,7 +20,6 @@ class MainApp extends StatelessWidget {
       title: 'Mobile Apps SWS',
       home: Login(),
       routes: routes,
-
     );
   }
 }

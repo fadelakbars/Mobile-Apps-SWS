@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mobile_apps_sws/screens/home.dart';
 import 'package:mobile_apps_sws/screens/lupa_pass.dart';
 import 'package:mobile_apps_sws/screens/regist.dart';
 import 'package:mobile_apps_sws/widget/outline_button.dart';
@@ -42,8 +43,9 @@ class Login extends StatelessWidget {
               CustomTextButton(
                 text: 'Lupa Password?',
                 textStyle: const TextStyle(
-                  fontFamily: 'Urbanist',
-                  fontSize: 12,
+                  color: Color.fromRGBO(30, 30, 30, 1),
+                  fontFamily: 'Poppins',
+                  fontSize: 15,
                   fontWeight: FontWeight.normal,
                 ),
                 onPressed: () => Navigator.pushNamed(
@@ -54,11 +56,12 @@ class Login extends StatelessWidget {
               const SizedBox(height: 25),
               CustomButton(
                 text: 'Login',
-                onPressed: () {},
-                color: const Color.fromRGBO(190, 10, 178, 1),
+                onPressed: () => Navigator.pushNamed(
+                  context,
+                  Home.routeName,
+                ),
                 textStyle: const TextStyle(color: Colors.white, fontSize: 14),
               ),
-              // const SizedBox(height: 5),
               const SizedBox(height: 5),
               CustomOutlineButton(
                 text: 'Daftar',
@@ -66,9 +69,9 @@ class Login extends StatelessWidget {
                   context,
                   Regist.routeName,
                 ),
-                borderColor: const Color.fromRGBO(190, 10, 178, 1),
+                borderColor: const Color.fromARGB(255, 212, 33, 243),
                 textStyle: const TextStyle(
-                    color: Color.fromRGBO(190, 10, 178, 1), fontSize: 14),
+                    color: Color.fromARGB(255, 212, 33, 243), fontSize: 14),
               ),
             ],
           ),

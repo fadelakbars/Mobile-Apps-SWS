@@ -16,119 +16,113 @@ class Regist extends StatelessWidget {
       backgroundColor: Colors.white,
       body: Center(
         child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 40),
-          child: SingleChildScrollView(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.stretch, // Align children to start of the cross axis
-              children: [
-                const SizedBox(height: 20),
-                const Text(
-                  "Regist",
-                  style: TextStyle(
-                    color: Color.fromRGBO(30, 30, 30, 1),
-                    fontFamily: 'Poppins',
-                    fontSize: 30,
-                    fontWeight: FontWeight.bold,
+          padding: const EdgeInsets.fromLTRB(40, 60, 40, 40),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: [
+              // Bagian atas
+              const Column(
+                children: [
+                  // const SizedBox(height: 40),
+                  Text(
+                    "Regist",
+                    style: TextStyle(
+                      color: Color.fromRGBO(30, 30, 30, 1),
+                      fontFamily: 'Poppins',
+                      fontSize: 30,
+                      fontWeight: FontWeight.bold,
+                    ),
+                    textAlign: TextAlign.center,
                   ),
-                  textAlign: TextAlign.center,
-                ),
-                const SizedBox(height: 5),
-                const Text(
-                  "Masukkan informasi lengkap untuk \nmembuat akun anda",
-                  textAlign: TextAlign.center,
-                  style: TextStyle(
-                    color: Color.fromRGBO(30, 30, 30, 1),
-                    fontFamily: 'Poppins',
-                    fontSize: 15,
-                    fontWeight: FontWeight.normal,
+                  SizedBox(height: 5),
+                  Text(
+                    "Masukkan informasi lengkap untuk \nmembuat akun anda",
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      color: Color.fromRGBO(30, 30, 30, 1),
+                      fontFamily: 'Poppins',
+                      fontSize: 15,
+                      fontWeight: FontWeight.normal,
+                    ),
                   ),
-                ),
-                const SizedBox(height: 45),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Flexible(
-                      child: Column(
-                        children: const [
-                          TextField2(
-                            hintText: 'Nama',
-                            labelText: 'Nama',
-                          ),
-                          SizedBox(height: 10),
-                          TextField2(
-                            hintText: '081234567',
-                            labelText: 'No Whatsapp',
-                            keyboardType: TextInputType.number,
-                          ),
-                        ],
+                  SizedBox(height: 50),
+                ],
+              ),
+
+              const Column(
+                children: [
+                  CustomTextField(
+                    hintText: 'Nama',
+                    labelText: 'Nama',
+                  ),
+                  SizedBox(height: 10),
+                  CustomTextField(
+                    hintText: '081234567',
+                    labelText: 'No Whatsapp',
+                    keyboardType: TextInputType.number,
+                  ),
+                  SizedBox(height: 10),
+                  CustomTextField(
+                    hintText: 'email@gmail.com',
+                    labelText: 'Email',
+                    keyboardType: TextInputType.emailAddress,
+                  ),
+                  SizedBox(height: 10),
+                  CustomTextField(
+                    hintText: 'Masukkan Password',
+                    labelText: 'Password',
+                    keyboardType: TextInputType.visiblePassword,
+                    obscureText: true,
+                  ),
+                  SizedBox(height: 10),
+                  CustomTextField(
+                    hintText: 'Masukkan Ulang Password',
+                    labelText: 'Konfirmasi Password',
+                    keyboardType: TextInputType.visiblePassword,
+                    obscureText: true,
+                  ),
+                ],
+              ),
+
+              // Spacer(),
+              const SizedBox(height: 20),
+
+              Column(
+                children: [
+                  CustomButton(
+                    text: 'Daftar',
+                    onPressed: () {},
+                    color: Color.fromRGBO(190, 10, 178, 1),
+                    textStyle:
+                        const TextStyle(color: Colors.white, fontSize: 18),
+                  ),
+                  const SizedBox(height: 5),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      const Text(
+                        "Sudah punya akun?",
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                          color: Color.fromRGBO(30, 30, 30, 1),
+                          fontFamily: 'Poppins',
+                          fontSize: 15,
+                          fontWeight: FontWeight.normal,
+                        ),
                       ),
-                    ),
-                    const SizedBox(width: 10),
-                    Flexible(
-                      child: Column(
-                        children: const [
-                          TextField2(
-                            hintText: 'email@gmail.com',
-                            labelText: 'Email',
-                            keyboardType: TextInputType.emailAddress,
-                          ),
-                          SizedBox(height: 10),
-                          TextField2(
-                            hintText: 'Jl. Manuruki Raya',
-                            labelText: 'Alamat',
-                          ),
-                        ],
+                      const SizedBox(width: 3),
+                      CustomTextButton(
+                        text: 'Login',
+                        onPressed: () => Navigator.pushNamed(
+                          context,
+                          Login.routeName,
+                        ),
                       ),
-                    ),
-                  ],
-                ),
-                const SizedBox(height: 20),
-                const CustomTextField(
-                  hintText: 'Masukkan Password',
-                  labelText: 'Password',
-                  keyboardType: TextInputType.visiblePassword,
-                  obscureText: true,
-                ),
-                const SizedBox(height: 10),
-                const CustomTextField(
-                  hintText: 'Masukkan Ulang Password',
-                  labelText: 'Konfirmasi Password',
-                  keyboardType: TextInputType.visiblePassword,
-                  obscureText: true,
-                ),
-                const SizedBox(height: 15),
-                CustomButton(
-                  text: 'Daftar',
-                  onPressed: () {},
-                  color: Color.fromRGBO(190, 10, 178, 1),
-                  textStyle: const TextStyle(color: Colors.white, fontSize: 14),
-                ),
-                const SizedBox(height: 20),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    const Text(
-                      "Sudah punya akun?",
-                      textAlign: TextAlign.center,
-                      style: TextStyle(
-                        color: Color.fromRGBO(30, 30, 30, 1),
-                        fontFamily: 'Poppins',
-                        fontSize: 15,
-                        fontWeight: FontWeight.normal,
-                      ),
-                    ),
-                    CustomTextButton(
-                      text: 'Login',
-                      onPressed: () => Navigator.pushNamed(
-                        context,
-                        Login.routeName,
-                      ),
-                    ),
-                  ],
-                ),
-                const SizedBox(height: 20),
-              ],
-            ),
+                    ],
+                  ),
+                ],
+              ),
+            ],
           ),
         ),
       ),

@@ -1,6 +1,7 @@
 // import 'dart:js';
 
 import 'package:flutter/material.dart';
+import 'package:mobile_apps_sws/screens/home.dart';
 import 'package:mobile_apps_sws/screens/login.dart';
 import 'package:mobile_apps_sws/screens/lupa_pass.dart';
 import 'package:mobile_apps_sws/screens/regist.dart';
@@ -11,6 +12,7 @@ final Map<String, WidgetBuilder> routes = {
   Regist.routeName: (context) => const Regist(),
   LupaPassword.routeName:(context) => LupaPassword(),
   VerifyEmail.routeName :(context) => const VerifyEmail(),
+  Home.routeName :(context) => const Home(),
   // Login.routeName: (context) => const Login(),
   // Login.routeName: (context) => const Login(),
 };

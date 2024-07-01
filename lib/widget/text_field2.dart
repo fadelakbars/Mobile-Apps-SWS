@@ -25,7 +25,7 @@ class _TextField2State extends State<TextField2> {
       child: Stack(
         children: <Widget>[
           Positioned(
-            top: 21,
+            top: 23,
             left: 0,
             right: 0,
             child: Container(
